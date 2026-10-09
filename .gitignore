@@ -11,8 +11,10 @@ gymMemberShip/.mvn/wrapper/maven-wrapper.jar
 # Maven wrapper (keep .mvn/wrapper/maven-wrapper.properties)
 !gymMemberShip/.mvn/wrapper/maven-wrapper.properties
 
-# Spring Boot application secrets (add your own)
+# Spring Boot application secrets — never commit real credentials
 gymMemberShip/src/main/resources/application-secret.properties
+# Uncomment the line below to stop tracking application.properties (recommended for production)
+# gymMemberShip/src/main/resources/application.properties
 
 # =============================
 # Node / Vite (Frontend)
