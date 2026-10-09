@@ -1,0 +1,275 @@
+:root {
+  --bg: #0a0a0a;
+  --surface: #171717;
+  --surface-2: #262626;
+  --border: #333333;
+  --text: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --accent: #f97316;
+  --accent-dark: #ea580c;
+  --success: #22c55e;
+  --success-bg: #052e16;
+  --warning: #facc15;
+  --warning-bg: #422006;
+  --danger: #ef4444;
+  --danger-bg: #450a0a;
+  --info: #38bdf8;
+  --info-bg: #082f49;
+  --gray-btn: #525252;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.page-container {
+  max-width: 1100px;
+  margin: 24px auto 0;
+  padding: 0 16px;
+}
+
+.page-title {
+  color: #ffffff;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: var(--accent);
+  color: #000000;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 9px 16px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-family: inherit;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--accent-dark);
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+.btn-gray {
+  background-color: var(--gray-btn);
+  color: #ffffff;
+}
+
+.btn-gray:hover {
+  background-color: #404040;
+}
+
+input, select, textarea {
+  background-color: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 9px 12px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:disabled, select:disabled, textarea:disabled {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: var(--surface-2);
+  color: var(--accent);
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.table-actions {
+  white-space: nowrap;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+}
+
+.badge {
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.badge-active {
+  color: var(--success);
+  background-color: var(--success-bg);
+}
+
+.badge-expiring {
+  color: var(--warning);
+  background-color: var(--warning-bg);
+}
+
+.badge-expired {
+  color: var(--danger);
+  background-color: var(--danger-bg);
+}
+
+.badge-frozen {
+  color: var(--info);
+  background-color: var(--info-bg);
+}
+
+.error-text {
+  color: var(--danger);
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    width: 100%;
+    margin: 0 16px;
+  }
+
+  .page-container {
+    padding: 0 12px;
+  }
+}

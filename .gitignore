@@ -1,0 +1,53 @@
+# =============================
+# Maven / Spring Boot (Backend)
+# =============================
+gymMemberShip/target/
+gymMemberShip/.mvn/wrapper/maven-wrapper.jar
+*.jar
+*.war
+*.ear
+*.class
+
+# Maven wrapper (keep .mvn/wrapper/maven-wrapper.properties)
+!gymMemberShip/.mvn/wrapper/maven-wrapper.properties
+
+# Spring Boot application secrets (add your own)
+gymMemberShip/src/main/resources/application-secret.properties
+
+# =============================
+# Node / Vite (Frontend)
+# =============================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# =============================
+# IDEs & Editors
+# =============================
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/settings.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =============================
+# OS
+# =============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =============================
+# Logs & Temp
+# =============================
+*.log
+.freebuff-logs/
+logs/
+tmp/
