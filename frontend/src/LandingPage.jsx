@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:8080/api";
+
 const LandingPage = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
@@ -17,7 +20,7 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchPublicData = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/plans");
+        const res = await axios.get(`${API_BASE_URL}/plans`);
         if (Array.isArray(res.data) && res.data.length > 0) {
           setPlans(res.data.filter((p) => p.status === "ACTIVE"));
         }
@@ -51,7 +54,7 @@ const LandingPage = () => {
       }
 
       try {
-        const resB = await axios.get("http://localhost:8080/api/branches");
+        const resB = await axios.get(`${API_BASE_URL}/branches`);
         if (Array.isArray(resB.data) && resB.data.length > 0) {
           setBranches(resB.data.filter((b) => b.active !== false));
         }

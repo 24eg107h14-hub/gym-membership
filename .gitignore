@@ -13,6 +13,8 @@ gymMemberShip/.mvn/wrapper/maven-wrapper.jar
 
 # Spring Boot application secrets — never commit real credentials
 gymMemberShip/src/main/resources/application-secret.properties
+gymMemberShip/.env
+gymMemberShip/.env.*.local
 # Uncomment the line below to stop tracking application.properties (recommended for production)
 # gymMemberShip/src/main/resources/application.properties
 
@@ -51,5 +53,6 @@ desktop.ini
 # =============================
 *.log
 .freebuff-logs/
+.freebuff/
 logs/
 tmp/
